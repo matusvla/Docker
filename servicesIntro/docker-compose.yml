@@ -1,0 +1,27 @@
+version: "3"
+services:
+  # name of the service
+  web: 
+    # pull image from the registry
+    image: vladislavmatus/first-dockerfile:1 
+    deploy:
+      # run 5 instances of that image
+      replicas: 5 
+      resources:
+        limits:
+          # one instance can use at most 10% of a single core of CPU time
+          cpus: "0.1" 
+          # and at most 50MB of RAM
+          memory: 50M 
+      restart_policy:
+         # restart all containers if one fails
+        condition: on-failure
+    ports:
+      # web's containers should share port 80, map port 4000 on the host to web’s port 80
+      - "4000:80" 
+    networks:
+      # this sharing should be done via network called webnet
+      - webnet 
+networks:
+  # define webnet network with default settings
+  webnet: 
