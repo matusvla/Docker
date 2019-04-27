@@ -12,3 +12,8 @@ docker container stop 1fa4ab2cf395
 
 docker login
 
+docker tag friendlyhello vladislavmatus/first-dockerfile:1.0
+
+docker image ls
+
+docker system prune -a
