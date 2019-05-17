@@ -7,6 +7,7 @@ https://docs.docker.com/get-started/part2/
 * Map your machine’s port 4000 to the container’s published port 80 and run the image: `docker run -d -p 4000:80 friendlyhello`
   
 * Display list of all containers: `docker container ls`
+  * `-q` just for container ids
   
 * Display list of all images: `docker image ls`
 
