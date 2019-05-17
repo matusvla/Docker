@@ -4,6 +4,8 @@ https://docs.docker.com/get-started/part3/
 
 * Initialize swarm mode for natively managing a cluster of Docker Engines: `docker swarm init`
 
-* Run the app: `docker stack deploy -c docker-compose.yml servicesintro`
+* Run the app under name servicesintro: `docker stack deploy -c docker-compose.yml servicesintro`
 
 * Show list of services: `docker service ls`
+
+* Show list of tasks in service `getstarted_lab` (task = single container running in specific service): `docker service ps getstartedlab_web`
