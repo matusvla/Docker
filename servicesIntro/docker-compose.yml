@@ -6,7 +6,7 @@ services:
     image: vladislavmatus/first-dockerfile:1 
     deploy:
       # run 5 instances of that image
-      replicas: 5 
+      replicas: 10 
       resources:
         limits:
           # one instance can use at most 10% of a single core of CPU time
